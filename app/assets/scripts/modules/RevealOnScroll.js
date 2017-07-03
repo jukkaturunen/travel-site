@@ -10,17 +10,17 @@ class RevealOnScroll {
   }
 
   hideInitially() {
-    this.itemsToReveal.addClass("reveal-item");
+    this.itemsToReveal.addClass('reveal-item');
   }
 
   createWaypoints() {
-    var that = this;
-    this.itemsToReveal.each(function(){
-      var item = this;
+    const that = this;
+    this.itemsToReveal.each(function() {
+      const item = this;
       new Waypoint({
         element: item,
         handler: function() {
-          $(item).addClass("reveal-item--is-visible");
+          $(item).addClass('reveal-item--is-visible');
         },
         offset: that.offset
       });
